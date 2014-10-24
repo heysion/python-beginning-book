@@ -3,6 +3,19 @@
 def print_var(div,var):
     print "%s = %s  %s" %(str(var),repr(div),repr(type(div)))
 
+#keyword match cmatch
+import math
+print_var(abs(10-77),"10-77")
+
+print_var(math.ceil(10.99),"10.99")
+print_var(math.ceil(10),"10")
+print_var(math.floor(10.99),"10.99")
+print_var(math.floor(10),"10")
+print_var(math.sqrt(10),"sqrt10")
+print_var(math.sqrt(9),"sqrt9")
+
+exit(0)
+
 #keyword string
 str_hello = "Hello word!"
 print_var(str_hello,"str")
