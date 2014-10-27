@@ -1,6 +1,32 @@
 def print_var(div,var):
     print "%s = %s  %s" %(str(var),repr(div),repr(type(div)))
 
+#keyword string translate
+from string import maketrans
+table = maketrans('cs','kz')
+#print table
+print 'this is an test'.translate(table)
+table2 = maketrans('cs','zh')
+print 'this is an test'.translate(table2)
+exit()
+#keyword string strp
+name = '             abc              kjkj     1       '
+print name.strip()
+print "len1:%d\tlen2:%d" %(len(name),len(name.strip()))
+del name
+name ="$$$$abcd$$$$12324$$"
+print name
+print name.strip('$')
+print name.rstrip('$')
+print name.lstrip('$')
+print name.strip('$$$')
+
+exit()
+#keyword string split
+name = "1+2+3+4+5"
+print_var(name.split('+'),"split str")
+print_var(name.rsplit('+'),"rsplit str")
+exit()
 #keyword string replace
 test = 'this is a test!\t abc'
 print test.replace('is','$$')
