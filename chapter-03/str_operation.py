@@ -1,6 +1,19 @@
 def print_var(div,var):
     print "%s = %s  %s" %(str(var),repr(div),repr(type(div)))
 
+#keyword string lower
+name = "ABCd"
+print name.lower()
+print name.islower()
+print name.capitalize()
+print name.swapcase()
+print name.title()
+print name.istitle()
+print name.upper()
+print name.isupper()
+print "that's all !'".title()
+print "that's all !'".capitalize()
+exit()
 #keyword string join
 seq = ['1','2','3','4','5']
 print_var(seq,"list")
