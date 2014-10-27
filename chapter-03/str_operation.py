@@ -1,6 +1,12 @@
 def print_var(div,var):
     print "%s = %s  %s" %(str(var),repr(div),repr(type(div)))
 
+#keyword string replace
+test = 'this is a test!\t abc'
+print test.replace('is','$$')
+print test.expandtabs(20)
+
+exit()
 #keyword string lower
 name = "ABCd"
 print name.lower()
