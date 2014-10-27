@@ -1,5 +1,44 @@
 def print_var(div,var):
     print "%s = %s  %s" %(str(var),repr(div),repr(type(div)))
+
+#keyword string join
+seq = ['1','2','3','4','5']
+print_var(seq,"list")
+sep = '+'
+print sep.join(seq)
+
+name = 'abced'
+print name.join('1')
+dirs = '','usr','bin','env'
+print_var(dirs,"list")
+print '/'.join(dirs)
+
+exit()
+#keyword string find rfind rindex count startwith endwith
+test = "abcd10000000000000000kjxkjkjlk"
+print test.find('jk')
+print test.find('9')
+print 'j' in test
+print 'jk' in test
+print test.rfind('k')
+print test.find('k')
+print test.index('j')
+print test.rindex('j')
+print test.count('j')
+print test.startswith('j')
+print test.startswith('abcd')
+print test.endswith('k')
+print test.endswith('abc')
+
+file_name = 'b.exe'
+print file_name.endswith('.exe')
+
+exit()
+name = "abcd10000000000000000"
+print name.isdigit()
+
+exit()
+
 #keywor string format
 format = "hello ,%s . wellcome to %s for your!"
 values = ('Heysion','Python')
