@@ -2,6 +2,61 @@
 def print_var(div,var):
     print "%s = %s  %s" %(str(var),repr(div),repr(type(div)))
 
+#keyword dict items iteritems
+test = {'name':'ben','age':45,'url':"ben.com"}
+print_var(test.items(),"item")
+it = test.iteritems()
+print_var(it,"it")
+print list(it)
+
+exit()
+#keyword dict get has_key
+name = {'name':'ben','age':45}
+print name.get('name')
+print name.get('abc')
+print name.get('abc','Error')
+print name.has_key('abc')
+print name.has_key('name')
+exit()
+#keywrod dict copy deepcopy fromkeys
+x = {"n":["abc","123"],"d":123}
+print_var(x,"dict")
+y = x.copy()
+print_var(y,"dict")
+print x == y
+y['d'] = 999
+print_var(x,"x dict")
+print_var(y,"y dict")
+y['n'].remove('123')
+print_var(x,"x")
+print_var(y,"y")
+y.clear()
+print_var(x,"x")
+print_var(y,"y")
+from copy import deepcopy
+d = deepcopy(x)
+print x == d
+d['n'].remove('abc')
+print_var(x,"x")
+print_var(d,"d")
+keys = ["name","age","lv"]
+test = dict.fromkeys(keys)
+print_var(test,"fromkeys")
+del test
+test = dict.fromkeys(keys,'Unknown')
+print_var(test,"fromkeys")
+exit()
+#keywword dict clear
+d = {}
+print_var(d,"dict")
+d['name'] = "Ben"
+d['age'] = 45
+print_var(d,"dict")
+ret = d.clear()
+print_var(d,"dict")
+print_var(ret,"ret")
+
+exit()
 #keyword dict format
 phonebook = {"Ben":"9912","Alice":"2341","Deep":"3258"}
 print_var(phonebook,"dict")
