@@ -2,6 +2,38 @@
 def print_var(div,var):
     print "%s = %s  %s" %(str(var),repr(div),repr(type(div)))
 
+#keyword dict setdefault update values itervalues
+d = {}
+d.setdefault('name',"N/A")
+d.setdefault('age',-1)
+print_var(d,"dict")
+d['age'] = 10
+print d.setdefault('age')
+print d
+x = {'url':"abc.com"}
+d.update(x)
+print d
+print_var(d.values(),"dict")
+it = d.itervalues()
+print list(it)
+
+exit()
+#keyword dict keys iterkeys pop popitem
+test = {'name':'ben','age':45,'url':"ben.com"}
+print_var(test.keys(),"keys")
+it = test.iterkeys()
+print list(it)
+print_var(test,"dict")
+pop_ret = test.pop('url')
+print_var(test,"dict")
+print_var(pop_ret,"pop")
+del pop_ret
+pop_ret = test.popitem()
+print_var(pop_ret,"pop")
+print_var(test,"dict")
+
+
+exit()
 #keyword dict items iteritems
 test = {'name':'ben','age':45,'url':"ben.com"}
 print_var(test.items(),"item")
