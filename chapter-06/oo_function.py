@@ -8,6 +8,17 @@ def if_print(x):
     else:
         print '%s %s == False' %(x,repr(type(x)))
 #
+#keyword function lambda
+x = 10
+y = 100
+g =lambda x,y:x+y
+print g(x,y)
+foo = range(10,0,-1)
+print filter(lambda x : x%3 == 0 , foo)
+print map(lambda x: x*2 + 10,foo)
+print reduce(lambda x,y: x+y ,foo)
+
+exit()
 #keyword function recursion
 def factorial(n):
     if n == 1:
