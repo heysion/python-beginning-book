@@ -8,6 +8,54 @@ def if_print(x):
     else:
         print '%s %s == False' %(x,repr(type(x)))
 #
+#keyword function recursion
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+#
+print factorial(3)
+print factorial(10)
+
+def MyPower(x,n):
+    result = 1
+    for i in range(n):
+        result = result * x
+    return result
+#
+print MyPower(10,2)
+
+exit()
+#keyword function in function
+def foo(x):
+    def p(x):
+        print "%s" %(repr(type(x)))
+    return p(x)
+#
+foo(x=10)
+def fobb(x):
+    def foaa(x):
+        return x*x
+    return foaa(x)
+#
+print fobb(10)
+exit()
+#keyword var global local
+def foo():
+    global x
+    x = x + 1
+#
+x = 10
+foo()
+print x
+exit()
+def foo(): x = 42 ; print x
+x = 10
+foo()
+print x
+
+exit()
 #keyword function struct params
 def add(x,y):
     return x+y
