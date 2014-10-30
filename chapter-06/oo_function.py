@@ -8,6 +8,14 @@ def if_print(x):
     else:
         print '%s %s == False' %(x,repr(type(x)))
 #
+#keyword function params
+def print_params(title='Default',*p1,**p2):
+    print title,p1,p2
+#
+print_params("abc",1,2,3,4,b=1,c=2)
+print_params(1)
+exit()
+
 #keyword function
 def func1(name,greeting="Hello"):
     print "%s ,%s !" %(greeting,name)
