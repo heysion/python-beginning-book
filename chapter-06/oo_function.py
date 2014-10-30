@@ -8,6 +8,17 @@ def if_print(x):
     else:
         print '%s %s == False' %(x,repr(type(x)))
 #
+#keyword function struct params
+def add(x,y):
+    return x+y
+#
+p1 = (1,2)
+print_var(p1,"tuple")
+print add(*p1)
+p2 = {"x":1,"y":2}
+print_var(p2,"list")
+print add(**p2)
+exit()
 #keyword function params
 def print_params(title='Default',*p1,**p2):
     print title,p1,p2
